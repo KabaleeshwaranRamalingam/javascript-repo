@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            background: linear-gradient(to left, rgb(249, 169, 169), rgb(163, 253, 163));
+        }
+
+        #count {
+            color: chocolate;
+            margin-left: 13px;
+        }
+
+        #time {
+            color: chocolate;
+            margin-left: 65px;
+        }
+    </style>
+
+</head>
+
+<body class="d-flex flex-column align-items-center justify-content-center">
+    <div>
+        <p id="count"><b>COUNTING APP</b></p>
+        <p id="time"></p>
+        </p>
+        <div class="">
+            <button type="button" class="btn btn-primary" onclick=increment()>+</button>
+            <button type="button" class="btn btn-success" onclick=decrement()>-</button>
+            <button type="button" class="btn btn-danger" onclick=reset()>RESET</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script>
+        //let countEl=document.getElementById("count")
+        let timeEl = document.getElementById("time")
+        let value = 0
+    
+        let increment = () => {
+            value += 1;
+            timeEl.textContent = value;
+        }
+        let decrement = () => {
+            value -= 1;
+            timeEl.textContent = value;
+        }
+        let reset = () => {
+            value = 0;
+            timeEl.textContent = value;
+        }
+    </script>
+</body>
+
+</html>

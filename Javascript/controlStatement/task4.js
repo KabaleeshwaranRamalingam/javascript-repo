@@ -1,0 +1,14 @@
+for(num=0;num<10;num++)
+{
+    if(num%3==0)
+    {
+    console.log(num)
+    }
+}
+for(num=0;num<=10;num++)
+{
+   if(num%5==0)
+   {
+       console.log(num)
+   }
+}

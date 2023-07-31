@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="">
+        <table>
+            <tr>
+                <td><label for="">Name:</label></td>
+                <td><input type="text" name="" id="name"></td>
+            </tr>
+            <tr>
+                <td><label for="">Email:</label></td>
+                <td><input type="text" name="" id="eMail"></td>
+            </tr>
+            <tr>
+                <td><label for="">Age:</label></td>
+                <td><input type="text" name="" id="age"></td>
+            </tr>
+            <tr>
+                <td><label for="Address">Address:</label></td>
+                <td><input type="text" name="" id="address"></td>
+            </tr>
+            <tr>
+                <td><label for="">Phone Number:</label></td>
+                <td><input type="text" name="" id="phnNumber"></td>
+            </tr>
+            <tr>
+                <td><input type="button" name="" id="submit" value="Submit" onclick=changeEvent()></td>
+            </tr>
+        </table>
+    </form>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <p id="p4"></p>
+    <p id="p5"></p>
+    <script>
+        let btnEl = document.querySelector("#submit")
+        let paraEl1 = document.querySelector("#p1")
+        let paraEl2 = document.querySelector("#p2")
+        let paraEl3 = document.querySelector("#p3")
+        let paraEl4 = document.querySelector("#p4")
+        let paraEl5 = document.querySelector("#p5")
+
+        function changeEvent() {
+            let nameEl = document.querySelector("#name").value
+            document.body.style.backgroundColor = "green"
+            paraEl1.textContent = "Name:" + nameEl
+            paraEl1.style.color = "white"
+            let emailEl = document.querySelector("#eMail").value
+            paraEl2.textContent = "Email:" + emailEl
+            paraEl2.style.color = "white"
+            let ageEl = document.querySelector("#age").value
+            paraEl3.textContent = "Age:" + ageEl
+            paraEl3.style.color = "white"
+            let addressEl = document.querySelector("#address").value
+            paraEl4.textContent = "Address:" + addressEl
+            paraEl4.style.color = "white"
+            let phnNumberEl = document.querySelector("#phnNumber").value
+            paraEl5.textContent = "PhoneNumber:" + phnNumberEl
+            paraEl5.style.color = "white"
+        }
+
+    </script>
+</body>
+
+</html>
